@@ -40,15 +40,15 @@ public class JavafxApplication extends Application {
         this.context.close();
         Platform.exit();
     }
+}
 
-    class StageReadyEvent extends ApplicationEvent {
+class StageReadyEvent extends ApplicationEvent {
 
-        public Stage getStage() {
-            return Stage.class.cast(getSource());
-        }
+    public Stage getStage() {
+        return Stage.class.cast(getSource());
+    }
 
-        public StageReadyEvent(Object source) {
-            super(source);
-        }
+    public StageReadyEvent(Object source) {
+        super(source);
     }
 }
